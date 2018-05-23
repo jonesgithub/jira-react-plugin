@@ -24,7 +24,11 @@
   </web-section>
   <web-item name="React Item" i18n-name-key="react-item.name" key="react-item" section="system.top.navigation.bar" weight="1000">
     <description key="react-item.description">The React Item Plugin</description>
-    <label key="react-item.label"></label>
-    <link linkId="react-item-link">/react-plugin</link>
+    <label key="react-item.label"/>
+    <link linkId="react-item-link">/plugins/servlet/react</link>
   </web-item>
+  <servlet name="React Servlet" i18n-name-key="react-servlet.name" key="react-servlet" class="lab.dk.servlet.ReactServlet">
+    <description key="react-servlet.description">The React Servlet Plugin</description>
+    <url-pattern>/react</url-pattern>
+  </servlet>
 </atlassian-plugin>
