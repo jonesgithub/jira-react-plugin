@@ -31,4 +31,7 @@
     <description key="react-servlet.description">The React Servlet Plugin</description>
     <url-pattern>/react</url-pattern>
   </servlet>
+  <rest name="React Endpoint" i18n-name-key="react-endpoint.name" key="react-endpoint" path="/react" version="1.0">
+    <description key="react-endpoint.description">The React Endpoint Plugin</description>
+  </rest>
 </atlassian-plugin>
