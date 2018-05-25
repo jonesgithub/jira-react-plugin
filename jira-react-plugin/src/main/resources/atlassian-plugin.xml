@@ -16,7 +16,6 @@
     <resource type="download" name="jira-react-plugin.css" location="/css/jira-react-plugin.css"/>
     <resource type="download" name="jira-react-plugin.js" location="/js/jira-react-plugin.js"/>
     <resource type="download" name="images/" location="/images"/>
-    <context>jira-react-plugin</context>
   </web-resource>
   <web-section name="React JS" i18n-name-key="react-js.name" key="react-js" location="react-js" weight="1000">
     <description key="react-js.description">The React JS Plugin</description>
