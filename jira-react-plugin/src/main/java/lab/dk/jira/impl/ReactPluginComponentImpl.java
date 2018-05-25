@@ -3,20 +3,20 @@ package lab.dk.jira.impl;
 import com.atlassian.plugin.spring.scanner.annotation.export.ExportAsService;
 import com.atlassian.plugin.spring.scanner.annotation.imports.ComponentImport;
 import com.atlassian.sal.api.ApplicationProperties;
-import lab.dk.jira.api.MyPluginComponent;
+import lab.dk.jira.api.ReactPluginComponent;
 
 import javax.inject.Inject;
 import javax.inject.Named;
 
-@ExportAsService ({MyPluginComponent.class})
-@Named ("myPluginComponent")
-public class MyPluginComponentImpl implements MyPluginComponent
+@ExportAsService ({ReactPluginComponent.class})
+@Named ("reactPluginComponent")
+public class ReactPluginComponentImpl implements ReactPluginComponent
 {
     @ComponentImport
     private final ApplicationProperties applicationProperties;
 
     @Inject
-    public MyPluginComponentImpl(final ApplicationProperties applicationProperties)
+    public ReactPluginComponentImpl(final ApplicationProperties applicationProperties)
     {
         this.applicationProperties = applicationProperties;
     }
@@ -25,9 +25,9 @@ public class MyPluginComponentImpl implements MyPluginComponent
     {
         if(null != applicationProperties)
         {
-            return "myComponent:" + applicationProperties.getDisplayName();
+            return "reactPluginComponent:" + applicationProperties.getDisplayName();
         }
         
-        return "myComponent";
+        return "reactPluginComponent";
     }
 }

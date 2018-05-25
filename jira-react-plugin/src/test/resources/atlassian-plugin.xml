@@ -6,7 +6,7 @@
     </plugin-info>
 
     <!-- from our base plugin -->
-    <component-import key="myComponent" interface="lab.dk.jira.api.MyPluginComponent"/>
+    <component-import key="reactPluginComponent" interface="lab.dk.jira.api.ReactPluginComponent"/>
 
     <!-- from the product container -->
     <component-import key="applicationProperties" interface="com.atlassian.sal.api.ApplicationProperties" />
