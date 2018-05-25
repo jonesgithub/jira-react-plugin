@@ -1,36 +1,38 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <atlassian-plugin key="${atlassian.plugin.key}" name="${project.name}" plugins-version="2">
-  <plugin-info>
-    <description>${project.description}</description>
-    <version>${project.version}</version>
-    <vendor name="${project.organization.name}" url="${project.organization.url}"/>
-    <param name="plugin-icon">images/pluginIcon.png</param>
-    <param name="plugin-logo">images/pluginLogo.png</param>
-  </plugin-info>
-  <!-- add our i18n resource -->
-  <resource type="i18n" name="i18n" location="jira-react-plugin"/>
-  <!-- add our web resources -->
-  <web-resource key="jira-react-plugin-resources" name="jira-react-plugin Web Resources">
-    <dependency>com.atlassian.auiplugin:ajs</dependency>
-    <resource type="download" name="jira-react-plugin.css" location="/css/jira-react-plugin.css"/>
-    <resource type="download" name="jira-react-plugin.js" location="/js/jira-react-plugin.js"/>
-    <resource type="download" name="images/" location="/images"/>
-  </web-resource>
-  <web-section name="React JS" i18n-name-key="react-js.name" key="react-js" location="react-js" weight="1000">
-    <description key="react-js.description">The React JS Plugin</description>
-    <label key="react-js.label"/>
-  </web-section>
-  <web-item name="React Item" i18n-name-key="react-item.name" key="react-item" section="system.top.navigation.bar" weight="1000">
-    <description key="react-item.description">The React Item Plugin</description>
-    <label key="react-item.label"/>
-    <link linkId="react-item-link">/plugins/servlet/react</link>
-  </web-item>
-  <servlet name="React Servlet" i18n-name-key="react-servlet.name" key="react-servlet" class="lab.dk.servlet.ReactServlet">
-    <description key="react-servlet.description">The React Servlet Plugin</description>
-    <url-pattern>/react</url-pattern>
-  </servlet>
-  <rest name="React Endpoint" i18n-name-key="react-endpoint.name" key="react-endpoint" path="/react" version="1.0">
-    <description key="react-endpoint.description">The React Endpoint Plugin</description>
-  </rest>
+    <plugin-info>
+        <description>${project.description}</description>
+        <version>${project.version}</version>
+        <vendor name="${project.organization.name}" url="${project.organization.url}"/>
+        <param name="plugin-icon">images/pluginIcon.png</param>
+        <param name="plugin-logo">images/pluginLogo.png</param>
+    </plugin-info>
+    <!-- add our i18n resource -->
+    <resource type="i18n" name="i18n" location="jira-react-plugin"/>
+    <!-- add our web resources -->
+    <web-resource key="jira-react-plugin-resources" name="jira-react-plugin Web Resources">
+        <dependency>com.atlassian.auiplugin:ajs</dependency>
+        <resource type="download" name="bundle.js" location="/js/bundle.js"/>
+        <resource type="download" name="bundle.css" location="/css/bundle.css"/>
+        <resource type="download" name="img/" location="/img"/>
+    </web-resource>
+    <web-section name="React JS" i18n-name-key="react-js.name" key="react-js" location="react-js" weight="1000">
+        <description key="react-js.description">The React JS Plugin</description>
+        <label key="react-js.label"/>
+    </web-section>
+    <web-item name="React Item" i18n-name-key="react-item.name" key="react-item" section="system.top.navigation.bar"
+              weight="1000">
+        <description key="react-item.description">The React Item Plugin</description>
+        <label key="react-item.label"/>
+        <link linkId="react-item-link">/plugins/servlet/react</link>
+    </web-item>
+    <servlet name="React Servlet" i18n-name-key="react-servlet.name" key="react-servlet"
+             class="lab.dk.servlet.ReactServlet">
+        <description key="react-servlet.description">The React Servlet Plugin</description>
+        <url-pattern>/react</url-pattern>
+    </servlet>
+    <rest name="React Endpoint" i18n-name-key="react-endpoint.name" key="react-endpoint" path="/react" version="1.0">
+        <description key="react-endpoint.description">The React Endpoint Plugin</description>
+    </rest>
 </atlassian-plugin>
