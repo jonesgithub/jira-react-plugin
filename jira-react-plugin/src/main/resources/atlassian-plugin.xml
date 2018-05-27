@@ -28,7 +28,7 @@
         <link linkId="react-item-link">/plugins/servlet/react</link>
     </web-item>
     <servlet name="React Servlet" i18n-name-key="react-servlet.name" key="react-servlet"
-             class="lab.dk.servlet.ReactServlet">
+             class="lab.dk.servlet.IndexPageServlet">
         <description key="react-servlet.description">The React Servlet Plugin</description>
         <url-pattern>/react</url-pattern>
     </servlet>

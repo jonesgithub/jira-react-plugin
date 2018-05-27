@@ -1,6 +1,6 @@
 package lab.dk.jira.api;
 
-public interface MyPluginComponent
+public interface ReactPluginComponent
 {
     String getName();
 }

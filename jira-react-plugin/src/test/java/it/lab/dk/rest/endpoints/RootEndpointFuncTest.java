@@ -4,17 +4,14 @@ import org.junit.Ignore;
 import org.junit.Test;
 import org.junit.After;
 import org.junit.Before;
-import org.mockito.Mockito;
 
-import static org.junit.Assert.*;
-import static org.mockito.Mockito.*;
-
-import lab.dk.rest.endpoints.ReactEndpoint;
-import lab.dk.rest.endpoints.ReactEndpointModel;
+import lab.dk.rest.model.Message;
 import org.apache.wink.client.Resource;
 import org.apache.wink.client.RestClient;
 
-public class ReactEndpointFuncTest {
+import static org.junit.Assert.assertEquals;
+
+public class RootEndpointFuncTest {
 
     @Before
     public void setup() {
@@ -31,13 +28,11 @@ public class ReactEndpointFuncTest {
     public void messageIsValid() {
 
         String baseUrl = System.getProperty("baseurl");
-        String resourceUrl = baseUrl + "/rest/react/1.0/message";
+        String resourceUrl = baseUrl + "/rest/react/latest/";
 
         RestClient client = new RestClient();
         Resource resource = client.resource(resourceUrl);
-
-        ReactEndpointModel message = resource.get(ReactEndpointModel.class);
-
-//        assertEquals("wrong message", "Hello World", message.getMessage());
+        Message message = resource.get(Message.class);
+        assertEquals("wrong message", "Hello from protected area", message.getMessage());
     }
 }
