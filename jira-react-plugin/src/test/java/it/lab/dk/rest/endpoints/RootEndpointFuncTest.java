@@ -9,7 +9,9 @@ import lab.dk.rest.model.Message;
 import org.apache.wink.client.Resource;
 import org.apache.wink.client.RestClient;
 
-public class PublicEndpointFuncTest {
+import static org.junit.Assert.assertEquals;
+
+public class RootEndpointFuncTest {
 
     @Before
     public void setup() {
@@ -26,13 +28,11 @@ public class PublicEndpointFuncTest {
     public void messageIsValid() {
 
         String baseUrl = System.getProperty("baseurl");
-        String resourceUrl = baseUrl + "/rest/react/1.0/message";
+        String resourceUrl = baseUrl + "/rest/react/latest/";
 
         RestClient client = new RestClient();
         Resource resource = client.resource(resourceUrl);
-
         Message message = resource.get(Message.class);
-
-//        assertEquals("wrong message", "Hello World", message.getMessage());
+        assertEquals("wrong message", "Hello from protected area", message.getMessage());
     }
 }
