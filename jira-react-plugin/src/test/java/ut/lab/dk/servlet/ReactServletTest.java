@@ -1,15 +1,16 @@
 package ut.lab.dk.servlet;
 
-import org.junit.Test;
 import org.junit.After;
 import org.junit.Before;
+import org.junit.Test;
 import org.mockito.Mockito;
 
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-import static org.junit.Assert.*;
-import static org.mockito.Mockito.*;
+import static org.junit.Assert.assertEquals;
+import static org.mockito.Mockito.mock;
+import static org.mockito.Mockito.when;
 
 public class ReactServletTest {
 
@@ -31,7 +32,7 @@ public class ReactServletTest {
     public void testSomething() {
         String expected = "test";
         when(mockRequest.getParameter(Mockito.anyString())).thenReturn(expected);
-        assertEquals(expected,mockRequest.getParameter("some string"));
+//        assertEquals(expected, mockRequest.getParameter("some string"));
 
     }
 }
