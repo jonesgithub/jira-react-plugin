@@ -4,7 +4,7 @@
     <modelVersion>4.0.0</modelVersion>
     <groupId>lab.dk</groupId>
     <artifactId>jira-react-plugin</artifactId>
-    <version>0.0.2</version>
+    <version>0.0.2-SNAPSHOT</version>
     <organization>
         <name>Dmytro Kataiev</name>
         <url>https://lab.dkataiev.info/dkataiev/cv</url>
