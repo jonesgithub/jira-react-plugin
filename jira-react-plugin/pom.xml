@@ -294,7 +294,7 @@
                 <artifactId>maven-release-plugin</artifactId>
                 <version>2.5.3</version>
                 <configuration>
-                    <tag>${project.version}</tag>
+                    <tag>${tag.version}</tag>
                     <tagNameFormat>@{project.version}</tagNameFormat>
                     <autoVersionSubmodules>true</autoVersionSubmodules>
                     <!-- releaseProfiles configuration will actually force a Maven profile
