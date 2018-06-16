@@ -14,12 +14,12 @@
         <connection>scm:git:git@lab.dkataiev.info:dk-labs/jira-react-plugin.git</connection>
       <tag>@{releaseTagName}</tag>
   </scm>
-    <distributionManagement>
-        <repository>
-            <id>nexus-releases</id>
-            <url>http://localhost:8081/repository/maven-public/</url>
-        </repository>
-    </distributionManagement>
+    <!--<distributionManagement>-->
+        <!--<repository>-->
+            <!--<id>nexus-releases</id>-->
+            <!--<url>http://localhost:8081/repository/maven-public/</url>-->
+        <!--</repository>-->
+    <!--</distributionManagement>-->
     <name>jira-react-plugin</name>
     <description>React JS plugin for Atlassian JIRA.</description>
     <packaging>atlassian-plugin</packaging>
@@ -268,26 +268,26 @@
                 </executions>
             </plugin>
 
-            <plugin>
-                <groupId>org.codehaus.mojo</groupId>
-                <artifactId>build-helper-maven-plugin</artifactId>
-                <version>1.7</version>
-                <executions>
-                    <execution>
-                        <id>regex-property</id>
-                        <goals>
-                            <goal>regex-property</goal>
-                        </goals>
-                        <configuration>
-                            <name>tag.version</name>
-                            <value>${project.version}</value>
-                            <regex>^([\.\d]*)$</regex>
-                            <replacement>v.$1-RELEASE</replacement>
-                            <failIfNoMatch>true</failIfNoMatch>
-                        </configuration>
-                    </execution>
-                </executions>
-            </plugin>
+            <!--<plugin>-->
+                <!--<groupId>org.codehaus.mojo</groupId>-->
+                <!--<artifactId>build-helper-maven-plugin</artifactId>-->
+                <!--<version>1.7</version>-->
+                <!--<executions>-->
+                    <!--<execution>-->
+                        <!--<id>regex-property</id>-->
+                        <!--<goals>-->
+                            <!--<goal>regex-property</goal>-->
+                        <!--</goals>-->
+                        <!--<configuration>-->
+                            <!--<name>tag.version</name>-->
+                            <!--<value>${project.version}</value>-->
+                            <!--<regex>^([\.\d]*)$</regex>-->
+                            <!--<replacement>v.$1-RELEASE</replacement>-->
+                            <!--<failIfNoMatch>true</failIfNoMatch>-->
+                        <!--</configuration>-->
+                    <!--</execution>-->
+                <!--</executions>-->
+            <!--</plugin>-->
 
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
@@ -327,35 +327,35 @@
         <npm.version>6.1.0</npm.version>
         <directory.ui.src>../jira-react-plugin-ui</directory.ui.src>
     </properties>
-    <profiles>
-        <profile>
-            <id>release</id>
-            <build>
-                <plugins>
-                    <plugin>
-                        <groupId>org.sonatype.plugins</groupId>
-                        <artifactId>nexus-staging-maven-plugin</artifactId>
-                        <version>1.6.5-atlassian-2</version>
-                        <executions>
-                            <execution>
-                                <id>default-deploy</id>
-                                <phase>deploy</phase>
-                                <goals>
-                                    <goal>deploy</goal>
-                                </goals>
-                            </execution>
-                        </executions>
-                        <configuration>
-                            <serverId>test-repo</serverId>
-                            <nexusUrl>http://localhost:8081/</nexusUrl>
-                            <skipStaging>true</skipStaging>
-                        </configuration>
-                    </plugin>
-                </plugins>
-            </build>
-            <properties>
-                <maven.javadoc.skip>true</maven.javadoc.skip>
-            </properties>
-        </profile>
-    </profiles>
+    <!--<profiles>-->
+        <!--<profile>-->
+            <!--<id>release</id>-->
+            <!--<build>-->
+                <!--<plugins>-->
+                    <!--<plugin>-->
+                        <!--<groupId>org.sonatype.plugins</groupId>-->
+                        <!--<artifactId>nexus-staging-maven-plugin</artifactId>-->
+                        <!--<version>1.6.5-atlassian-2</version>-->
+                        <!--<executions>-->
+                            <!--<execution>-->
+                                <!--<id>default-deploy</id>-->
+                                <!--<phase>deploy</phase>-->
+                                <!--<goals>-->
+                                    <!--<goal>deploy</goal>-->
+                                <!--</goals>-->
+                            <!--</execution>-->
+                        <!--</executions>-->
+                        <!--<configuration>-->
+                            <!--<serverId>test-repo</serverId>-->
+                            <!--<nexusUrl>http://localhost:8081/</nexusUrl>-->
+                            <!--<skipStaging>true</skipStaging>-->
+                        <!--</configuration>-->
+                    <!--</plugin>-->
+                <!--</plugins>-->
+            <!--</build>-->
+            <!--<properties>-->
+                <!--<maven.javadoc.skip>true</maven.javadoc.skip>-->
+            <!--</properties>-->
+        <!--</profile>-->
+    <!--</profiles>-->
 </project>
