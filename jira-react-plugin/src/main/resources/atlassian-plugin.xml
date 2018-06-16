@@ -13,9 +13,10 @@
     <!-- add our web resources -->
     <web-resource key="jira-react-plugin-resources" name="jira-react-plugin Web Resources">
         <dependency>com.atlassian.auiplugin:ajs</dependency>
-        <resource type="download" name="bundle.js" location="/js/bundle.js"/>
-        <resource type="download" name="bundle.css" location="/css/bundle.css"/>
+        <resource type="download" name="bundle.js" location="/static/js/main.4f1f3601.js"/>
+        <resource type="download" name="bundle.css" location="/static/css/main.c17080f1.css"/>
         <resource type="download" name="img/" location="/img"/>
+        <resource type="download" name="static/media/" location="/static/media"/>
     </web-resource>
     <web-section name="React JS" i18n-name-key="react-js.name" key="react-js" location="react-js" weight="1000">
         <description key="react-js.description">The React JS Plugin</description>
