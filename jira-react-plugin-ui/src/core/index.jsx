@@ -8,18 +8,19 @@ class Core extends Component {
     componentDidMount() {
         const MockAjs = {
             Meta: {
-                'context-path': '/'
+                'context-path': '/',
+                'base-url': process.env.PUBLIC_URL
             }
         };
 
-        const { initAjs } = this.props;
+        const {initAjs} = this.props;
         const ajs = window.AJS ? window.AJS : MockAjs;
         initAjs(ajs);
     }
 
 
     render() {
-        const { AJS } = this.props;
+        const {AJS} = this.props;
         return (
             <div className="App">
                 <header className="App-header">
@@ -29,7 +30,9 @@ class Core extends Component {
                 <p className="App-intro">
                     To get started, edit <code>src/App.js</code> and save to reload.
                 </p>
-                <div>{AJS.Meta ? AJS.Meta['context-path'] : '23424'}</div>
+                <div>
+                    <strong>context-path:</strong> {AJS.Meta ? AJS.Meta['context-path'] : 'N/A'}
+                </div>
             </div>
         );
     }
