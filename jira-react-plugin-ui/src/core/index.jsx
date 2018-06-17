@@ -3,7 +3,6 @@ import {connect} from 'react-redux'
 import logo from '../logo.svg';
 import {initializeAjs} from "./actions";
 
-
 class Core extends Component {
 
     componentDidMount() {
