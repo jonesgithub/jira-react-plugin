@@ -5,17 +5,17 @@
         <description>${project.description}</description>
         <version>${project.version}</version>
         <vendor name="${project.organization.name}" url="${project.organization.url}"/>
-        <param name="plugin-icon">images/pluginIcon.png</param>
-        <param name="plugin-logo">images/pluginLogo.png</param>
+        <param name="plugin-icon">static/media/pluginIcon.png</param>
+        <param name="plugin-logo">static/media/pluginLogo.png</param>
     </plugin-info>
     <!-- add our i18n resource -->
     <resource type="i18n" name="i18n" location="jira-react-plugin"/>
     <!-- add our web resources -->
     <web-resource key="jira-react-plugin-resources" name="jira-react-plugin Web Resources">
         <dependency>com.atlassian.auiplugin:ajs</dependency>
-        <resource type="download" name="bundle.js" location="/js/bundle.js"/>
-        <resource type="download" name="bundle.css" location="/css/bundle.css"/>
-        <resource type="download" name="img/" location="/img"/>
+        <resource type="download" name="static/js/" location="/static/js"/>
+        <resource type="download" name="static/css/" location="/static/css"/>
+        <resource type="download" name="static/media/" location="/static/media"/>
     </web-resource>
     <web-section name="React JS" i18n-name-key="react-js.name" key="react-js" location="react-js" weight="1000">
         <description key="react-js.description">The React JS Plugin</description>
