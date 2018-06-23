@@ -6,18 +6,21 @@
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test --env=jsdom",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "eslint": "eslint 'src/**'",
+    "fixlint": "eslint --fix 'src/**'"
   },
   "dependencies": {
-    "@atlaskit/button": "^8.2.3",
-    "@atlaskit/css-reset": "^2.0.6",
-    "@atlaskit/reduced-ui-pack": "^8.13.0",
     "react": "^16.4.1",
     "react-dom": "^16.4.1",
     "react-redux": "^5.0.7",
     "react-scripts": "1.1.4",
     "redux": "^4.0.0",
-    "styled-components": "^3.3.3"
+    "prop-types": "^15.6.2",
+    "styled-components": "^3.3.3",
+    "@atlaskit/button": "^8.2.3",
+    "@atlaskit/css-reset": "^2.0.6",
+    "@atlaskit/reduced-ui-pack": "^8.13.0"
   },
   "devDependencies": {
     "eslint": "^4.19.1",

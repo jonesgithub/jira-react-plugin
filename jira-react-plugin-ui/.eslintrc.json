@@ -2,6 +2,9 @@
     "extends": "airbnb",
     "rules": {
         "indent": ["error", 4],
+        "import/prefer-default-export": false,
+        "react/jsx-one-expression-per-line": false,
+        "react/jsx-indent": ["error", 4],
         "react/jsx-filename-extension": [
             "warn", { "extensions": [".js", ".jsx"] }
         ],
