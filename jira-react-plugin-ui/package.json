@@ -10,6 +10,7 @@
     "eslint": "eslint 'src/**'",
     "fixlint": "eslint --fix 'src/**'"
   },
+  "pre-push": "test, eslint",
   "dependencies": {
     "react": "^16.4.1",
     "react-dom": "^16.4.1",
@@ -27,6 +28,7 @@
     "eslint-config-airbnb": "^17.0.0",
     "eslint-plugin-import": "^2.12.0",
     "eslint-plugin-jsx-a11y": "^6.0.3",
-    "eslint-plugin-react": "^7.9.1"
+    "eslint-plugin-react": "^7.9.1",
+    "pre-push": "^0.1.1"
   }
 }

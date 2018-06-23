@@ -1,6 +1,6 @@
-import React, { Component } from 'react';
-import PropTypes from 'prop-types';
 import Button, { ButtonGroup } from '@atlaskit/button';
+import PropTypes from 'prop-types';
+import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { initializeAjs } from './actions';
 
@@ -15,7 +15,7 @@ class App extends Component {
 
         const { initAjs } = this.props;
         // eslint-disable-next-line no-undef
-        const ajs = window.AJS ? window.AJS : MockAjs;
+        const ajs = (window && window.AJS) ? window.AJS : MockAjs;
         initAjs(ajs);
     }
 
@@ -45,7 +45,7 @@ class App extends Component {
 
 
 const mapStateToProps = state => ({
-    AJS: state.core.AJS,
+    AJS: state.app.AJS,
 });
 
 const mapDispatchToProps = dispatch => ({
