@@ -1,34 +1,14 @@
 import Button, { ButtonGroup } from '@atlaskit/button';
-import PropTypes from 'prop-types';
 import React, { Component } from 'react';
-import { connect } from 'react-redux';
-import { initializeAjs } from './actions';
+import { ajs } from '../commons/Ajs';
 
 class App extends Component {
-    componentDidMount() {
-        const MockAjs = {
-            Meta: {
-                'context-path': '/',
-                'base-url': process.env.PUBLIC_URL,
-            },
-        };
-
-        const { initAjs } = this.props;
-        // eslint-disable-next-line no-undef
-        const ajs = (window && window.AJS) ? window.AJS : MockAjs;
-        initAjs(ajs);
-    }
-
-
     render() {
-        const { AJS } = this.props;
         return (
             <div className="App">
                 <div>
-                    <strong>
-                        context-path:
-                    </strong>
-                    {AJS.Meta ? AJS.Meta['context-path'] : 'N/A'}
+                    <strong>context-path:</strong>
+                    {ajs ? ajs().Meta['context-path'] : 'N/A'}
                 </div>
                 <div>
                     <ButtonGroup>
@@ -43,21 +23,4 @@ class App extends Component {
     }
 }
 
-
-const mapStateToProps = state => ({
-    AJS: state.app.AJS,
-});
-
-const mapDispatchToProps = dispatch => ({
-    initAjs: ajs => dispatch(initializeAjs(ajs)),
-});
-
-App.propTypes = {
-    AJS: PropTypes.shape.isRequired,
-    initAjs: PropTypes.func.isRequired,
-};
-
-export default connect(
-    mapStateToProps,
-    mapDispatchToProps,
-)(App);
+export default App;
