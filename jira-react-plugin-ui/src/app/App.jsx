@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
+import Button, { ButtonGroup } from '@atlaskit/button';
 import { connect } from 'react-redux';
-import './App.css';
-import logo from './logo.svg';
 import { initializeAjs } from './actions';
 
 class App extends Component {
@@ -23,15 +22,16 @@ class App extends Component {
         const {AJS} = this.props;
         return (
             <div className="App">
-                <header className="App-header">
-                    <img src={logo} className="App-logo" alt="logo"/>
-                    <h1 className="App-title">Welcome to React</h1>
-                </header>
-                <p className="App-intro">
-                    To get started, edit <code>src/App.js</code> and save to reload.
-                </p>
                 <div>
                     <strong>context-path:</strong> {AJS.Meta ? AJS.Meta['context-path'] : 'N/A'}
+                </div>
+                <div>
+                    <ButtonGroup>
+                        <Button>First Button</Button>
+                        <Button>Second Button</Button>
+                        <Button>Button Tertius</Button>
+                        <Button>Fourth Button</Button>
+                    </ButtonGroup>
                 </div>
             </div>
         );
