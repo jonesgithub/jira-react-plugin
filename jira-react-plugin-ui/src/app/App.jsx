@@ -1,20 +1,19 @@
-import React, {Component} from 'react';
-import {connect} from "react-redux";
+import React, { Component } from 'react';
+import { connect } from 'react-redux';
 import './App.css';
 import logo from './logo.svg';
-import {initializeAjs} from "./actions";
+import { initializeAjs } from './actions';
 
 class App extends Component {
-
     componentDidMount() {
         const MockAjs = {
             Meta: {
                 'context-path': '/',
-                'base-url': process.env.PUBLIC_URL
+                'base-url': process.env.PUBLIC_URL,
             }
         };
 
-        const {initAjs} = this.props;
+        const { initAjs } = this.props;
         const ajs = window.AJS ? window.AJS : MockAjs;
         initAjs(ajs);
     }

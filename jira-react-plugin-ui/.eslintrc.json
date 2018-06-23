@@ -1,11 +1,12 @@
 {
     "extends": "airbnb",
     "rules": {
+        "indent": ["error", 4],
         "react/jsx-filename-extension": [
-            1, { "extensions": [".js", ".jsx"] }
+            "warn", { "extensions": [".js", ".jsx"] }
         ],
         "react/prefer-stateless-function": [
-            1, { "ignorePureComponents": false }
+            "warn", { "ignorePureComponents": false }
         ]
     },
     "globals": {
