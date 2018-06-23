@@ -4,13 +4,16 @@ const initialState = {
     AJS: {},
 };
 
-const coreReducer = (state = initialState, action) => {
+const appReducer = (state = initialState, action) => {
     switch (action.type) {
-        case types.INITIALIZE_AJS:
-            return {...state, AJS: action.AJS};
-        default:
-            return state;
+    case types.INITIALIZE_AJS:
+        return {
+            ...state,
+            AJS: action.AJS,
+        };
+    default:
+        return state;
     }
 };
 
-export default coreReducer;
+export default appReducer;
