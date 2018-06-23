@@ -10,7 +10,7 @@
     "eslint": "eslint 'src/**'",
     "fixlint": "eslint --fix 'src/**'"
   },
-  "pre-push": "test, eslint",
+  "pre-push": ["test", "eslint"],
   "dependencies": {
     "react": "^16.4.1",
     "react-dom": "^16.4.1",
