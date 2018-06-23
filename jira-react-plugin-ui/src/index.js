@@ -16,7 +16,7 @@ const store = createStore(
 const renderApp = () => {
     ReactDOM.render(
         <Provider store={store}>
-            {App(store)}
+            <App store={store}/>
         </Provider>,
         document.getElementById('root'), /* eslint-disable-line  */
     );
