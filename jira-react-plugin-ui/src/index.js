@@ -33,5 +33,3 @@ if (window.AJS) {
     console.log("Dev bundle initialization");
     renderApp();
 }
-
-
